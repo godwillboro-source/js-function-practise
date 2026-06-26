@@ -17,4 +17,4 @@ function mergeAlternately(word1, word2) {
     return result.join("");
 }
 let word1 = "abc", word2 = "pqr";
-console.log(mergeAlternately(word1, word2)); // Output: "apbqcr"
+console.log(mergeAlternately(word1, word2)); // Output: "apbqcr"                                                                        
