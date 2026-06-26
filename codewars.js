@@ -1,14 +1,15 @@
 function mostFrequentItemCount(collection) {
   // Do your magic. :)
+  //return 0 if nothing is present in the array
   
   if (collection.length === 0) return 0;
-
-  const counts = {};
-  for (const x of collection) {
-    counts[x] = (counts[x] || 0) + 1;
-  }
-
-  return Math.max(...Object.values(counts));
+  
+  //Math.max is used to find the maximum number type(num) in the array
+  //... is used as Math.max cannot diectly access items in the array
+  //collection.map is used to create a shadoy copy of the array to store frequencies
+  //.length is used to run through all the items in the "frequency array" 
+  return Math.max(...collection.map(num =>
+  collection.filter(i => i === num).length));
 }
 console.log(mostFrequentItemCount([3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3, 9, 9, 9, 9, 9, 9, 9]));
 
